@@ -1,0 +1,429 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Make sure the body and html take the full height */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fruktur' , cursive;
+    padding: 10px 20px; /* Shorter header height */
+    background-color: #b84c65; /* Customizable background color */
+    height: 60px; /* Shortened height */
+    margin-bottom: 10px; /* Reduces gap between header and hero section */
+}
+
+.logo img {
+    width: 90px; /* Adjust the logo size */
+}
+
+.navbar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffe600;
+    font-size: 20px;
+}
+
+.navbar ul li a:hover {
+    color: #ff7f50;
+}
+
+/* Login/Signup Button */
+.login-btn {
+    padding: 10px 20px;
+    background-color: #f9d657;
+    color: #b84c65;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-btn:hover {
+    background-color: #ffcc00;
+}
+
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 75px; /* Adjusts hero section padding */
+    background-image: url('Home.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Adds shadow around hero section */
+    margin-top: -10px; /* Reduces gap further */
+    
+}
+
+.hero-content {
+    max-width: 500px;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 55px;
+    font-family: 'Arvo' , serif;
+    color: #a33c08;
+}
+
+.hero-content p {
+    font-size: 18px;
+    font-family: 'Caveat Brush', cursive;
+    text-align: center;
+    margin: 35px 0;
+    color: #333;
+}
+
+/* Aesthetic Order Now Button */
+.order-btn {
+    padding: 12px 24px;
+    background-color: #b84c65;
+    font-family: 'Arvo' , serif;
+    color: #f9d657;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-btn:hover {
+    background-color: #5f0d0d;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Dessert Image */
+.dessert-image {
+    text-align: center;
+    width: 450px;
+}
+
+.dessert-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Curved Dessert Name */
+.dessert-name {
+    margin-top: 10px;
+    font-size: 45px;
+    color: #f9d657;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    font-family: 'Sofia', cursive; /* Use a custom cursive font */
+    text-shadow: 
+    2px 2px 0 rgba(255, 0, 0, 0.941),   /* Red echo */
+    6px 6px 0 rgba(214, 78, 19, 0.2);   /* Blue echo */
+}
+
+/* Best Seller Section */
+.best-seller {
+    text-align: center; /* Center align the title */
+    margin: 40px 0; /* Space above and below the section */
+}
+
+.best-seller h2 {
+    font-family: 'Arvo', serif; /* Change to your desired font */
+    font-size: 65px; /* Title size */
+    color: #b84c65; /* Title color */
+    margin-bottom: 30px; /* Space below the title */
+}
+
+/* Dessert Items */
+.desserts {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center the items */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 30px; /* Space between items */
+    margin-top: 20px; /* Space below the title */
+    padding: 0 20px; /* Padding to avoid content touching edges */
+}
+
+.dessert-item {
+    background-color: #ffc1cc; /* White background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid #e0e0e0; /* Light border */
+    padding: 15px; /* Inner padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    max-width: 250px; /* Set a max width for items */
+    flex: 1 1 auto; /* Allow items to grow and shrink */
+}
+
+.dessert-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.dessert-item img {
+    width: 100%; /* Full width of container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.dessert-item h3 {
+    font-size: 24px; /* Dessert title size */
+    font-family: 'Caveat Brush', cursive;
+    font-weight: bold; /* Bold title */
+    color: #b84c65; /* Title color */
+    margin: 15px 0 5px; /* Margin for spacing */
+}
+
+.dessert-item p {
+    font-size: 16px; /* Description text size */
+    color: #555; /* Gray color for readability */
+    margin: 5px 0; /* Margin for spacing */
+}
+
+.rating {
+    font-size: 14px; /* Rating text size */
+    color: #ffcc00; /* Color for rating stars */
+    margin-bottom: 10px; /* Space below rating */
+}
+
+/* Order Now Button */
+.order-btn {
+    display: inline-block; /* Display as inline block */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #b84c65; /* Button background color */
+    color: #f9d657; /* Button text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transition effects */
+}
+
+.order-btn:hover {
+    background-color: #ff7f50; /* Change color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Menu Section Styles */
+.menu {
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.menu h2 {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 60px; /* Larger heading */
+    color: #a33c08;
+    margin-bottom: 20px;
+}
+
+:root {
+    --category-border-color: #dac0a7; /* Default border color */
+    --category-gap: 50px; /* Default gap between categories */
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--category-gap); /* Space between categories */
+}
+
+/* Updated category-item with a fixed size and border */
+.category-item {
+    position: relative;
+    width: 250px; /* Fixed width for category items */
+    height: 350px; /* Set a fixed height */
+    border: 2px solid var(#ffc1cc); /* Use variable for border color */
+    border-radius: 25px; /* Rounded corners */
+    overflow: hidden; /* Ensures images stay contained */
+    background-color: #ffc1cc; /* White background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px; /* Padding to avoid image touching borders */
+}
+
+.category-item img {
+    width: 100%; /* Full width of container */
+    height: 150px; /* Fixed height to keep consistency */
+    object-fit: cover; /* Maintain aspect ratio within container */
+    border-radius: px; /* Adjust for roundness within border */
+    margin-bottom: 20px; /* Space between image and text */
+}
+
+/* Image slider styles */
+.image-slider {
+    position: relative;
+    width: 100%;
+    height: 150px; /* Fixed height for images */
+    overflow: hidden; /* Hide overflow of images */
+}
+
+.image-slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the entire slider */
+    height: 100%; /* Cover the entire slider */
+    object-fit: cover; /* Maintain aspect ratio */
+    transition: opacity 0.3s ease; /* Transition effect */
+}
+
+.image-slider .hover-image {
+    opacity: 0; /* Hide hover images initially */
+}
+
+.category-item:hover .main-image {
+    opacity: 0; /* Hide main image on hover */
+}
+
+.category-item:hover .hover-image {
+    opacity: 1; /* Show hover images on hover */
+}
+
+/* Category Text Styles */
+.category-item h3 {
+    margin: 10px 0 5px;
+    font-family: 'Caveat Brush', cursive;
+    font-weight: bold; /* Bold category name */
+    font-size: 1.2em;
+    color: #333;
+}
+
+.category-item p {
+    font-size: 0.9em; /* Smaller description text */
+    font-family: 'Caveat Brush', cursive;
+    color: #666; /* Grey description color */
+    margin: 5px 0; /* Space around description */
+    text-align: center;
+}
+
+.flavors-btn {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px; /* Adjust this value to increase the gap */
+    margin-bottom: 50px; /* Add bottom margin to create space between the button and the next section */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    font-family: 'Caveat Brush', cursive;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px; /* Max width for larger screens */
+    border-radius: 10px; /* Rounded corners */
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-family: 'Caveat Brush', cursive;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.flavor-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.flavor-item {
+    flex: 1 1 45%; /* Responsive sizing */
+    margin: 10px;
+    text-align: center;
+}
+.flavor-item img {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+}
+.add-to-cart {
+    background-color: #b84c65;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.add-to-cart:hover {
+    background-color: #5f0d0d;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #b84c65;
+    padding: 20px; /* Increase padding for better spacing */
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between icons */
+}
+
+.footer .social-icons a img {
+    width: 40px;  /* Set desired width */
+    height: 40px; /* Set desired height */
+    transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.footer .social-icons a img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
